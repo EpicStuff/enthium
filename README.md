@@ -2,11 +2,12 @@
 # Enthium — slightly modified
 # Changes
 - work in progress
-- provding [keyd](https://github.com/rvaiya/keyd) config instead of whatever sunaku was using (so only linux for now)
-- moved some symbols around a bit
-- added overload-tap keys (caps -> shift/w, shift -> ctrl/esc)
+- provding [keyd](https://github.com/rvaiya/keyd) config (more features + works on wayland) instead of whatever sunaku was using (so only linux for now)
+	- i can make a kanata version if any windows/mac users are interested
+	- go to https://github.com/rvaiya/keyd for installation instructions
+- moved some symbols around a bit (for easier bracket access (for programming))
+- added overload/Mod-tap keys (caps -> shift/w, shift -> ctrl/esc, alt -> alt/backspace)
 - started work on a symbols layer (hold space then press key)
-- go to https://github.com/rvaiya/keyd for installation instructions
 - look though default.conf for all changes
 - the rest of this README is slightly inaccurate (will add modified layout image when i get around to it)
 
