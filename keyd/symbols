@@ -1,0 +1,86 @@
+[symbols] 	 	
+# top row
+q = 1
+w = 2
+e = 3
+r = 0
+t = ^
+y = ?
+u = !
+i = up
+o = %
+p = noop
+[ = rightbrace
+
+# home row
+a = 4
+s = 5
+d = 6
+f = @
+# g = 
+h = #
+j = left
+k = down
+l = right
+; = *
+apostrophe = `
+
+# bottom row
+z = 7
+x = 8
+c = 9
+v = )
+b = }
+n = <
+m = >
+, = $
+. = \
+/ = noop
+
+# shift
+[symbols+enthium_shift]
+f=&
+[ = }
+
+
+############# mirrored #############
+[mirrored+symbols]
+# top row
+q = ]
+w = %
+e = up
+r = !
+t = ?
+y = noop
+u = noop
+i = noop
+o = noop
+p = noop
+[ = noop
+
+# home row
+capslock = `
+a = *
+s = right
+d = down
+f = left
+g = #
+h = noop
+j = noop
+k = noop
+l = noop
+; = noop
+apostrophe = noop
+
+# bottom row
+leftshift = noop
+z = \
+x = $
+c = noop
+v = >
+b = noop
+n = noop
+m = noop
+, = noop
+. = noop
+/ = noop

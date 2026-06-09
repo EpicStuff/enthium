@@ -1,0 +1,7 @@
+[global]
+default_layout = enthium
+layer_indicator = 1
+disable_modifier_guard = 1
+
+overload_tap_timeout = 200
+oneshot_timeout = 200
