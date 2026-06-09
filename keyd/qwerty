@@ -1,0 +1,204 @@
+[qwerty]
+# numbers row
+- = -
+= = =
+
+# top row
+q = q
+w = w
+e = e
+r = r
+t = t
+y = y
+u = u
+i = i
+o = o
+p = p
+[ = [
+] = ]
+
+# home row
+capslock = layer(control)
+a = a
+s = s
+d = d
+f = f
+g = g
+h = h
+j = j
+k = k
+l = l
+; = ;
+' = '
+
+# bottom row
+leftshift = layer(shift)
+z = z
+x = x
+c = c
+v = v
+b = b
+n = n
+m = m
+, = ,
+. = .
+/ = /
+rightshift = rightshift
+
+# space row
+leftalt = layer(alt)
+space = space
+rightalt = layer(altgr)
+
+
+############# control #############
+[qwerty_control:C]
+q = C-q
+w = C-w
+e = C-e
+r = C-r
+t = C-t
+y = C-y
+u = C-u
+i = C-i
+o = C-o
+p = C-p
+[ = C-[
+] = C-]
+a = C-a
+s = C-s
+d = C-d
+f = C-f
+g = C-g
+h = C-h
+j = C-j
+k = C-k
+l = C-l
+; = C-;
+' = C-'
+z = C-z
+x = C-x
+c = C-c
+v = C-v
+b = C-b
+n = C-n
+m = C-m
+, = C-,
+. = C-.
+/ = C-/
+
+############# alt #############
+[qwerty_alt:A]
+q = A-q
+w = A-w
+e = A-e
+r = A-r
+t = A-t
+y = A-y
+u = A-u
+i = A-i
+o = A-o
+p = A-p
+[ = A-[
+] = A-]
+a = A-a
+s = A-s
+d = A-d
+f = A-f
+g = A-g
+h = A-h
+j = A-j
+k = A-k
+l = A-l
+; = A-;
+' = A-'
+z = A-z
+x = A-x
+c = A-c
+v = A-v
+b = A-b
+n = A-n
+m = A-m
+, = A-,
+. = A-.
+/ = A-/
+
+
+############# mirrored #############
+[mirrored+qwerty]
+# numbers row
+` = backspace
+1 = =
+2 = -
+3 = 0
+4 = 9
+5 = 8
+6 = 7
+7 = 6
+8 = 5
+9 = 4
+0 = 3
+- = 2
+= = 1
+backspace = `
+
+# top row
+tab = oneshotm(tab_mirror_single, [)
+q = p
+w = o
+e = i
+r = u
+t = y
+y = t
+u = r
+i = e
+o = w
+p = q
+[ = tab
+] = tab
+\ = tab
+
+# home row
+capslock = lettermod(control, apostrophe, 50, 200)
+a = ;
+s = l
+d = k
+f = j
+g = h
+h = g
+j = f
+k = d
+l = s
+; = a
+' = layer(control)
+
+#' bottom row
+leftshift = lettermod(shift, /, 50, 200)
+z = .
+x = ,
+c = m
+v = n
+b = b
+n = v
+m = c
+, = x
+. = z
+/ = layer(shift)
+
+
+# special stuff for mirrored tab
+## first tab press with shift
+[shift+mirrored+qwerty]
+tab = oneshotm(tab_mirror_single, {)
+
+
+
+# stuff
+## qwerty with shifted modifier keys instead of swapped
+[shifted_qwerty]
+[shifted_qwerty+qwerty]
+capslock = layer(shift)
+leftshift = layer(control)
+## activate with leftmeta+leftcontrol
+[main]
+leftmeta+leftcontrol = toggle(shifted_qwerty)

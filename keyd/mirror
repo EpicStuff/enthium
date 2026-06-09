@@ -1,0 +1,38 @@
+# TODO: also mirror fn keys and maybe move numbers to this file/(just) mirored layer
+
+[main]
+kp9 = layerm(mirrored, G-kp9)
+
+# tab has been pressed once, tab again:
+[tab_mirror_single]
+## enthium
+[mirrored+tab_mirror_single]
+#tab = oneshotm(tab_mirror_double, macro(backspace ]))
+tab = macro(backspace backslash)
+## qwerty
+[mirrored+qwerty+tab_mirror_single]
+tab = oneshotm(tab_mirror_double, macro(backspace ]))
+# with (enthium_)shift
+## enthium
+[enthium_shift+mirrored+tab_mirror_single]
+#tab = oneshotm(tab_mirror_double, macro(backspace }))
+tab = macro(backspace |)
+## qwerty
+[shift+mirrored+tab_mirror_single]
+tab = oneshotm(tab_mirror_double, macro(backspace }))
+
+# tab has been pressed twice, tab again:
+[tab_mirror_double]
+## enthium
+#[mirrored+tab_mirror_single+tab_mirror_double]
+#tab = macro(backspace backslash)
+## qwerty
+[mirrored+qwerty+tab_mirror_single+tab_mirror_double]
+tab = macro(backspace backslash)
+# with (enthium_)shift
+## enthium
+#[shift+mirrored+tab_mirror_single+tab_mirror_double]
+#tab = macro(backspace |)
+## qwerty
+[enthium_shift+mirrored+tab_mirror_single+tab_mirror_double]
+tab = macro(backspace |)

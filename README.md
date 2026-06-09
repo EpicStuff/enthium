@@ -8,6 +8,9 @@
 - moved some symbols around a bit (for easier bracket access (for programming))
 - added overload/Mod-tap keys (caps -> shift/w, shift -> ctrl/esc, alt -> alt/backspace)
 - started work on a symbols layer (hold space then press key)
+- added (some) ctrl qwerty shortcuts
+	- cuz ctrl-c and ctrl-v are too far apart
+	- and im too lazy to relearn shortcuts
 - look though default.conf for all changes
 - the rest of this README is slightly inaccurate (will add modified layout image when i get around to it)
 
@@ -27,9 +30,9 @@ featuring a `,;` cluster and HJKL for Vim, `-=` for zooming, and `./` for paths.
       ' - = . / j m g b v
                 r
 
-![Heatmap of this layout by Valorance, adapted from Oxeylyzer.](heatmap.png)
-![Concept of this layout on a split, ortho-linear keyboard.](layout.png)
-![Rendering of this layout on a row-staggered laptop keyboard.](laptop.png)
+![Heatmap of this layout by Valorance, adapted from Oxeylyzer.](docs/heatmap.png)
+![Concept of this layout on a split, ortho-linear keyboard.](docs/layout.png)
+![Rendering of this layout on a row-staggered laptop keyboard.](docs/laptop.png)
 ![Rendering of this layout on my Glove80 keyboard.](https://github.com/sunaku/glove80-keymaps/raw/main/README/base-layer-diagram-Enthium.png)
 ![Photograph of this layout on my Glove80 keyboard.](https://github.com/sunaku/glove80-keymaps/raw/main/README/base-layer-photograph-Enthium.jpg)
 
@@ -83,7 +86,7 @@ and you'll see that Enthium is statistically among the best layouts there:
 
 These results were [computed with Cyanophage's Layout Analyzer][cNM] as follows.
 
-[![Statistics for Enthium from Cyanophage's Layout Analyzer](cyanophage.png)][cNM]
+[![Statistics for Enthium from Cyanophage's Layout Analyzer](docs/cyanophage.png)][cNM]
 
 [cNM]: https://cyanophage.github.io/playground.html?layout=zyuo%3Bqldpx%5Cciea%2Ckhtnsf%27-%3D.%2Fjmgbv*rw&mode=ergo&lan=english&thumb=r
 [cPM]: https://cyanophage.github.io/playground.html?layout=fpdlx%3Buoybzsnthk%2Caeicqvwgmj-.%27%3D%2F%5Cr&mode=ergo&lan=english&thumb=l
@@ -119,7 +122,7 @@ These results were [computed with Cyanophage's Layout Analyzer][cNM] as follows.
 ### Linux setup
 
 >*Legend:* QWERTY=white, Engram=yellow, Promethium=green, Enthium=blue, Quirks=pink.
->![Rendering of this layout on a row-staggered keyboard.](laptop.png)
+>![Rendering of this layout on a row-staggered keyboard.](docs/laptop.png)
 
 Install:
 

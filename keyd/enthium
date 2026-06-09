@@ -1,0 +1,150 @@
+[enthium:layout]
+# numbers row
+- = <
+= = >
+
+# top row
+q = q
+w = y
+e = u
+r = o
+t = esc
+y = x
+u = l
+i = d
+o = p
+p = z
+[ = =
+] = noop
+
+# home row
+capslock = layer(enthium_shift)
+a = c
+s = i
+d = e
+f = a
+g = '
+h = k
+j = h
+k = t
+l = n
+; = s
+' = -
+
+# bottom row
+leftshift = overload(qwerty_control, b)
+z = w
+x = ;
+c = ,
+v = .
+b = /
+n = j
+m = m
+, = g
+. = f
+/ = v
+rightshift = layer(altgr)
+
+# space row
+leftcontrol = layer(meta)
+leftmeta = overload(qwerty, toggle(qwerty))
+leftalt = overload(qwerty_alt, backspace)
+space = lettermod(symbols, space, 150, 200)
+rightalt = lettermod(enthium_shift, r, 10, 200)
+
+[enthium_shift:S]
+9 = ?
+- = ]
+= = }
+backspace = S-delete
+
+t = S-enter
+
+c = (
+v = [
+b = {
+
+
+leftalt = overload(qwerty_alt, delete)
+
+
+############# mirrored #############
+[mirrored]
+# mouse
+kp8 = enter
+
+# numbers row
+` = backspace
+1 = >
+2 = <
+3 = 0
+4 = 9
+5 = 8
+6 = 7
+7 = 6
+8 = 5
+9 = 4
+0 = 3
+- = 2
+= = 1
+backspace = `
+
+# top row
+tab = oneshotm(tab_mirror_single, =)
+q = z
+w = p
+e = d
+r = l
+t = x
+y = esc
+u = o
+i = u
+o = y
+p = q
+[ = tab
+] = tab
+\ = tab
+
+# home row
+capslock = lettermod(enthium_shift, -, 50, 200)
+a = s
+s = n
+d = t
+f = h
+g = k
+h = apostrophe
+j = a
+k = e
+l = i
+; = c
+apostrophe = layer(enthium_shift)
+
+# bottom row
+leftshift = lettermod(qwerty_control, v, 50, 200)
+z = f
+x = g
+c = m
+v = j
+b = /
+n = .
+m = ,
+, = ;
+. = b
+/ = w
+rightshift = overload(qwerty_control, w)
+
+# space row
+leftmeta = rightcontrol
+leftalt = lettermod(enthium_shift, r, 150, 200)
+
+leftalt+capslock = capslock
+
+
+# special stuff for mirrored tab
+## first tab press, with shift
+[mirrored+enthium_shift]
+tab = oneshotm(tab_mirror_single, +)
+
+## first tab press, with ctlr
+# [mirrored+enthium_control]
+# TODO i think
