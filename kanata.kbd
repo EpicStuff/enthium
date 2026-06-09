@@ -16,86 +16,86 @@
 ;; chords
 (defchordsv2
 	(lsft rsft)	caps	200	all-released	()
-	(spc lmet caps)	C-del	200	all-released	()
+	;;(spc lmet caps)	C-del	200	all-released	()  ;; don't remember what this is for
 )
 
 ;; helper aliases
 (defalias
-	caps_e															(multi lshift	(layer-while-held enthium_shift))
-	caps_m		(tap-hold-press		150 200 -						(multi lshift	(layer-while-held enthium_shift)))
-	lsft_e		(tap-hold-press		150 200 b						(multi lctl		(layer-while-held qwerty_control)))
-	lsft_m		(tap-hold-press		150 200 v						(multi lctl		(layer-while-held qwerty_control)))
-	lalt_e		(tap-hold-press		150 200 bspc					(multi lalt		(layer-while-held qwerty_alt)))
-	lalt_s		(tap-hold-press		150 200 del						(multi lalt		(layer-while-held qwerty_alt)))
+	lsft															(multi lshift	(layer-while-held enthium_shift))
+	lsft_w		(tap-hold-press		150 200 w						(multi lshift	(layer-while-held enthium_shift)))
+	lctl_b		(tap-hold-press		150 200 b						(multi lctl		(layer-while-held enthium_control)))
+	rctr_v		(tap-hold-press		150 200 v						(multi rctl		(layer-while-held enthium_control)))
+	lalt_bspc	(tap-hold-press		150 200 bspc					lalt)
+	lalt_del	(tap-hold-press		150 200 del						lalt)
 	
-	spc_e		(tap-hold-release	150 200 spc										(layer-while-held symbols))
-	ralt_e		(tap-hold-press		10 200 r						(multi rshift	(layer-while-held enthium_shift)))
+	spc_sym		(tap-hold-release	150 200 spc										(layer-while-held symbols))
+	rsft_r		(tap-hold-press		10 200 r						(multi rshift	(layer-while-held enthium_shift)))
 	qwerty		(tap-hold-press		150 200 (layer-switch qwerty)					(layer-while-held qwerty))
 
-	tab_m		(tap-dance 200 (= \))
+	tab		(tap-dance 200 (= \))
 )
 
-;; base layer: enthium
+;; base layer
 (deflayer enthium
-	_       _       _       _       _       _       _       _       _       _       _       S-,     S-.     _
-    _         q       y       u       o       esc     x       l       d       p       z       =       XX      _
-    @caps_e    c       i       e       a       '       k       h       t       n       s       -       _
-    @lsft_e     w       ;       ,       .       /       j       m       g       f       v       altgr
-    lmet        @qwerty @lalt_e                  @spc_e                 @ralt_e _       _
+    _       _       _       _       _       _       _       _       _       _       _       XX      XX      _
+    _         q       y       u       o       =       x       l       d       p       z       S-9     [       {
+    @lsft      c       i       a       e       -       k       h       t       n       s       w       _
+    @lctl_b     '       ,       .       ;       /       j       m       g       f       v       altgr
+    lmet        @qwerty @lalt_bspc               @spc_sym               @rsft_r _       _
 )
 
-;; enthium shift layer
+;; special shift (move some of the symbols around)
 (deflayer enthium_shift
-	_       _       _       _       _       _       _       _       _       /       _       F14     ]       del
-    _         _       _       _       _       enter   _       _       _       _       _       _       _       _
+    _       _       _       _       _       _       _       _       _       F13     S-\     XX      XX      del
+    _         _       _       _       _       _       _       _       _       _       _       S-0     F14     S-]
     _          _       _       _       _       _       _       _       _       _       _       _       _
-    _           _       _       9       F13     [       _       _       _       _       _       _
-    _           _       @lalt_s                  _                      _       _       _
+    _           _       _       _       _       _       _       _       _       _       _       _
+    _           _       @lalt_del                _                      _       _       _
 )
 (defoverrides
-	(lsft F13)	([)       ;; v -> [
-	(lsft F14)	(])       ;; - -> ]
+	(lsft F13)	(\)       ;; 9 -> \
+	(lsft F14)	(])       ;; ] -> ]
 )
 
-;; symbols layer
+;; custom ctrl, keeping common shortcuts performable with only right hand
+(deflayer enthium_control
+    _       _       _       _       _       _       _       _       _       _       _       -       =       _
+    _         _       _       z       h       t       '       _       XX      _       u       _       _       _
+    _          _       s       _       f       d       _       o       XX      _       i       ;       _
+    _           x       v       _       w       _       _       _       _       e       ,       _
+    _           _       _                        _                      _       _       _
+)
+
+;; symbols layer, work in progress
 (deflayer symbols
-	_       _       _       _       _       _       _       _       _       _       _       _       _       _
-    _         1       2       3       0       S-6     S-/     S-1     up      S-5     XX      ]       XX      XX
-    tab        4       5       6       S-2     S-0     S-3     left    down    right   S-8     grv     _
-    _           7       8       9       ]       S-]     S-,     S-.     S-4     \       XX      XX
+    XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+    _         1       2       3       0       S-9     S-0     pgup    up      pgdn    XX      XX      XX      XX
+    _          4       5       6       `       [       ]       left    down    right   XX      XX      XX
+    _           7       8       9       XX      {       }       XX      XX      XX      XX      _
+    _           _       _                        _                      _       _       _
+)
+(deflayer symbols_shift
+    XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+    _         _       _       _       S-\     S-0     S-9     _       _       _       XX      XX      XX      XX
+    _          _       _       _       S-`     ]       [       _       _       _       XX      XX      _
+    _           _       _       \       XX      }       {       XX      XX      XX      XX      _
     _           _       _                        _                      _       _       _
 )
 
 ;; enthium mirrored
 (deflayer mirrored
 	bspc    S-.     S-,     0       9       8       7       6       5       4       3       2       1       `
-    @tab_m    z       p       d       l       x       esc     o       u       y       q       tab     tab     tab
-    @caps_m    s       n       t       h       k       '       a       e       i       c       lshft   lshft
-    @lsft_m     f       g       m       j       /       .       ,       ;       b       w       @lsft_e
-    rctl        @qwerty @ralt_e                  @spc_e                 @lalt_e rmet    lmet
+    @tab      z       p       d       l       x       esc     o       u       y       q       tab     tab     tab
+    @lsft_w    s       n       t       h       k       '       a       e       i       c       lshft   lshft
+    @rctr_v     f       g       m       j       /       .       ,       ;       b       w       @lctl_b
+    rctl        @qwerty @rsft_r                  @spc_sym               @lalt_bspc rmet    lmet
 )
 
 ;; plain qwerty layer
 (deflayer qwerty
-	grv     1       2       3       4       5       6       7       8       9       0       -       =       bspc
+    grv     1       2       3       4       5       6       7       8       9       0       -       =       bspc
     tab       q       w       e       r       t       y       u       i       o       p       [       ]       \
     lctl       a       s       d       f       g       h       j       k       l       ;       '       ret
     lsft        z       x       c       v       b       n       m       ,       .       /       rsft
     lctl        (layer-switch enthium) lalt                     spc                    ralt    rmet    rctl
-)
-
-;; control and alt shortcuts, use qwerty layout for these modifiers, duplicated for better keyd conversion
-(deflayer qwerty_control
-	_       _       _       _       _       _       _       _       _       _       _       _       _       _
-    _         q       w       e       r       t       y       u       i       o       p       [       ]       _
-    _          a       s       d       f       g       h       j       k       l       ;       '       _
-    _           z       x       c       v       b       n       m       ,       .       /       _
-    _           _       _                        _                      _       _       _
-)
-(deflayer qwerty_alt
-	_       _       _       _       _       _       _       _       _       _       _       _       _       _
-    _         q       w       e       r       t       y       u       i       o       p       [       ]       _
-    _          a       s       d       f       g       h       j       k       l       ;       '       _
-    _           z       x       c       v       b       n       m       ,       .       /       _
-    _           _       _                        _                      _       _       _
 )
