@@ -1,0 +1,100 @@
+;; standard 60 percent source layout
+(defsrc
+	grv     1       2       3       4       5       6       7       8       9       0       -       =       bspc
+	tab       q       w       e       r       t       y       u       i       o       p       [       ]       \
+	caps       a       s       d       f       g       h       j       k       l       ;       '       ret
+	lsft        z       x       c       v       b       n       m       ,       .       /       rsft
+	lctl        lmet    lalt                     spc                    ralt    rmet    rctl
+)
+;; stuff
+(defchordsv2
+	(lsft rsft)	caps	200	all-released	()
+	(spc lmet caps)	C-del	200	all-released	()
+)
+;;@game, switch to gaming mode: move symbol layer hold to some other key or something so holding space works
+;;@type, switch to typing mode: add stuff like
+
+;; enthium
+(deflayer enthium
+    _       _       _       _       _       _       _       _       _       _       _       @game   @type   _
+    _         q       y       u       o       =       x       l       d       p       z       ❲       [       {
+    @lsft      c       i       a       e       -       k       h       t       n       s       w       _
+    @lctl_b     '       ,       .       ;       /       j       m       g       f       v       altgr
+    lmet        @qwerty @lalt_bspc               @spc_sym               @rsft_r _       _
+)
+(deflayer enthium_shift
+	_       _       _       _       _       _       _       _       _       \       |       XX      XX      del
+    _         _       _       _       _       _       _       _       _       _       _       ❳       ]       }
+    _          _       _       _       _       _       _       _       _       _       _       _       _
+    _           _       _       _       _       _       _       _       _       _       _       _
+    _           _       @lalt_del                _                      _       _       _
+)
+(deflayer enthium_control
+	_       _       _       _       _       _       _       _       _       _       _       -       =       _
+    _         q       y       z       h       t       '       _       XX      _       u       _       _       _
+    _          c       s       a       f       d       _       o       XX      _       i       ;       _
+    _           x       v       .       w       /       _       _       _       e       ,       _
+    _           _       _                        _                      _       _       _
+)
+
+;; c       y   a q            
+;;   v x z   s     f
+;;                   w d . t n
+;; 1. match enthium key location
+;; 2. match querty key location
+;; 3. c x v and y z must be next to each other
+
+
+
+;; symbols
+(deflayer symbols
+    XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+    _         1       2       3       0       ❲       ❳       pgup    up      pgdn    XX      XX      XX      XX
+    _          4       5       6       `       [       ]       left    down    right   XX      XX      XX
+    _           7       8       9       XX      {       }       XX      XX      XX      XX      _
+    _           _       _                        _                      _       _       _
+)
+(deflayer symbols_shift
+    XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
+    _         !       @       #       |       ❳       ❲       s-pgup  s-up    s-pgdn  XX      XX      XX      XX
+    _          $       %       ^       ~       ]       [       s-left  s-down  s-right XX      XX      _
+    _           &       *       \       XX      }       {       XX      XX      XX      XX      _
+    _           _       _                        _                      _       _       _
+)
+
+
+;; stuff to add
+;; ° ∞ ✓ ✗
+;; ss -> § uu -> µ, AA -> Å
+;; α, β, γ, δ Δ, ε, θ, λ, π, ρ, σ Σ, τ, Ψ, ω Ω
+;; MediaPlayPause MediaNext MediaPrev
+
+(deflayer symbols_gaming
+    XX      f21     f22     f13     f14     f15     f16     f17     f18     f19     f20     f23     f24     XX
+    _         1       2       3       0       ❲       XX      pgup    up      pgdn    XX      XX      XX      XX
+    _          4       5       6       `       [       XX      left    down    right   XX      XX      kprt
+    _           7       8       9       XX      {       XX      XX      kp.     kp,     kp/     _
+    _           _       _                        _                      _       _       _
+) ;; ` ~
+(deflayer symbols_gaming_shift
+    XX      _       _       _       _       _       _       _       _       _       _       _       _       XX
+    _         !       @       #       |       ❳       XX      XX      ↑       XX      XX      XX      XX      XX
+    _          $       %       ^       ~       ]       XX      ←       ↓       →       XX      XX      _
+    _           &       *       \       XX      }       XX      XX      _       _       _       _
+    _           _       _                        _                      _       _       _
+)
+
+(deflayer symbols_typing
+    kp*     kp1     kp2     kp3     kp4     kp5     kp6     kp7     kp8     kp9     kp0     kp-     kp+     XX
+    _         1       2       3       0       ❲       XX      pgup    up      pgdn    XX      XX      XX      XX
+    _          4       5       6       `       [       XX      left    down    right   XX      XX      kprt
+    _           7       8       9       XX      {       XX      XX      kp.     kp,     kp/     _
+    _           _       _                        _                      _       _       _
+) ;; ` ~
+(deflayer symbols_typing_shift
+    _       _       _       _       _       _       _       _       _       _       _       _       _       XX
+    _         !       @       #       |       ❳       XX      XX      ↑       XX      XX      XX      XX      XX
+    _          $       %       ^       ~       ]       XX      ←       ↓       →       XX      XX      _
+    _           &       *       \       XX      }       XX      XX      _       _       _       _
+    _           _       _                        _                      _       _       _
+)
