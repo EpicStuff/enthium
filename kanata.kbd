@@ -1,4 +1,3 @@
-;; converted from your keyd config, no qwerty switch
 (defcfg
 	process-unmapped-keys yes
 	concurrent-tap-hold yes
@@ -32,13 +31,13 @@
 	rsft_r		(tap-hold-press		10 200 r						(multi rshift	(layer-while-held enthium_shift)))
 	qwerty		(tap-hold-press		150 200 (layer-switch qwerty)					(layer-while-held qwerty))
 
-	tab		(tap-dance 200 (= \))
+	tab			(tap-dance 200 (= \))
 )
 
 ;; base layer
 (deflayer enthium
     _       _       _       _       _       _       _       _       _       _       _       XX      XX      _
-    _         q       y       u       o       =       x       l       d       p       z       S-9     [       {
+    _         q       y       u       o       =       x       l       d       p       z       S-9     [       S-[
     @lsft      c       i       a       e       -       k       h       t       n       s       w       _
     @lctl_b     '       ,       .       ;       /       j       m       g       f       v       altgr
     lmet        @qwerty @lalt_bspc               @spc_sym               @rsft_r _       _
@@ -60,11 +59,11 @@
 ;; custom ctrl, keeping common shortcuts performable with only right hand
 (deflayer enthium_control
     _       _       _       _       _       _       _       _       _       _       _       -       =       _
-    _         _       _       z       h       t       '       _       XX      _       u       _       _       _
-    _          _       s       _       f       d       _       o       XX      _       i       ;       _
-    _           x       v       _       w       _       _       _       _       e       ,       _
+    _         _       _       z       h       t       '       _       _      _       u       _       _       _
+    _          _       s       _       f       d       _       o       _      _       i       ;       _
+    _           v       x       _       w       _       _       _       _       e       ,       _
     _           _       _                        _                      _       _       _
-)
+)  ;; note: ctrl t and d are "duplicated"
 
 ;; symbols layer, work in progress
 (deflayer symbols
@@ -78,7 +77,7 @@
     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
     _         _       _       _       S-\     S-0     S-9     _       _       _       XX      XX      XX      XX
     _          _       _       _       S-`     ]       [       _       _       _       XX      XX      _
-    _           _       _       \       XX      }       {       XX      XX      XX      XX      _
+    _           _       _       \       XX      S-]     S-[     XX      XX      XX      XX      _
     _           _       _                        _                      _       _       _
 )
 
@@ -90,6 +89,10 @@
     @rctr_v     f       g       m       j       /       .       ,       ;       b       w       @lctl_b
     rctl        @qwerty @rsft_r                  @spc_sym               @lalt_bspc rmet    lmet
 )
+
+;; todo
+;; (deflayer mirrored_symbols ...)
+;; (deflayer mirrored_symbols_shift ...)
 
 ;; plain qwerty layer
 (deflayer qwerty
