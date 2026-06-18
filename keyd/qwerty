@@ -16,6 +16,7 @@ o = o
 p = p
 [ = [
 ] = ]
+\ = \
 
 # home row
 capslock = layer(control)
@@ -50,78 +51,6 @@ leftalt = layer(alt)
 space = space
 rightalt = layer(altgr)
 
-
-############# control #############
-[qwerty_control:C]
-q = C-q
-w = C-w
-e = C-e
-r = C-r
-t = C-t
-y = C-y
-u = C-u
-i = C-i
-o = C-o
-p = C-p
-[ = C-[
-] = C-]
-a = C-a
-s = C-s
-d = C-d
-f = C-f
-g = C-g
-h = C-h
-j = C-j
-k = C-k
-l = C-l
-; = C-;
-' = C-'
-z = C-z
-x = C-x
-c = C-c
-v = C-v
-b = C-b
-n = C-n
-m = C-m
-, = C-,
-. = C-.
-/ = C-/
-
-############# alt #############
-[qwerty_alt:A]
-q = A-q
-w = A-w
-e = A-e
-r = A-r
-t = A-t
-y = A-y
-u = A-u
-i = A-i
-o = A-o
-p = A-p
-[ = A-[
-] = A-]
-a = A-a
-s = A-s
-d = A-d
-f = A-f
-g = A-g
-h = A-h
-j = A-j
-k = A-k
-l = A-l
-; = A-;
-' = A-'
-z = A-z
-x = A-x
-c = A-c
-v = A-v
-b = A-b
-n = A-n
-m = A-m
-, = A-,
-. = A-.
-/ = A-/
 
 
 ############# mirrored #############

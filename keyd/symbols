@@ -1,56 +1,81 @@
-[symbols] 	 	
+[symbols]
+# numbers row
+` = noop
+1 = noop
+2 = noop
+3 = noop
+4 = noop
+5 = noop
+6 = noop
+7 = noop
+8 = noop
+9 = noop
+0 = noop
+- = noop
+= = noop
+backspace = noop
+
 # top row
 q = 1
 w = 2
 e = 3
 r = 0
-t = ^
-y = ?
-u = !
+t = (
+y = )
+u = pageup
 i = up
-o = %
+o = pagedown
 p = noop
-[ = rightbrace
+[ = noop
+] = noop
+\ = noop
 
 # home row
 a = 4
 s = 5
 d = 6
-f = @
-# g = 
-h = #
+f = `
+g = [
+h = ]
 j = left
 k = down
 l = right
-; = *
-apostrophe = `
+; = noop
+apostrophe = noop
+enter = noop
 
 # bottom row
 z = 7
 x = 8
 c = 9
-v = )
-b = }
-n = <
-m = >
-, = $
-. = \
+v = noop
+b = {
+n = }
+m = noop
+, = noop
+. = noop
 / = noop
 
 # shift
 [symbols+enthium_shift]
-f=&
-[ = }
+r = |
+t = )
+y = (
+g = ]
+h = [
+c = \
+b = }
+n = {
 
 
-############# mirrored #############
+############# mirrored ############# todo
 [mirrored+symbols]
 # top row
-q = ]
-w = %
+q = noop
+w = noop
 e = up
-r = !
-t = ?
+r = noop
+t = noop
 y = noop
 u = noop
 i = noop
@@ -59,12 +84,12 @@ p = noop
 [ = noop
 
 # home row
-capslock = `
-a = *
+capslock = noop
+a = noop
 s = right
 d = down
 f = left
-g = #
+g = noop
 h = noop
 j = noop
 k = noop
@@ -74,10 +99,10 @@ apostrophe = noop
 
 # bottom row
 leftshift = noop
-z = \
-x = $
+z = noop
+x = noop
 c = noop
-v = >
+v = noop
 b = noop
 n = noop
 m = noop

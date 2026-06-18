@@ -59,8 +59,8 @@
 ;; custom ctrl, keeping common shortcuts performable with only right hand
 (deflayer enthium_control
     _       _       _       _       _       _       _       _       _       _       _       -       =       _
-    _         _       _       z       h       t       '       _       _      _       u       _       _       _
-    _          _       s       _       f       d       _       o       _      _       i       ;       _
+    _         _       _       z       h       t       '       _       _       _       u       _       _       _
+    _          _       s       _       f       d       _       o       _       _       i       ;       _
     _           v       x       _       w       _       _       _       _       e       ,       _
     _           _       _                        _                      _       _       _
 )  ;; note: ctrl t and d are "duplicated"
@@ -76,7 +76,7 @@
 (deflayer symbols_shift
     XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX      XX
     _         _       _       _       S-\     S-0     S-9     _       _       _       XX      XX      XX      XX
-    _          _       _       _       S-`     ]       [       _       _       _       XX      XX      _
+    _          _       _       _       _       ]       [       _       _       _       XX      XX      _
     _           _       _       \       XX      S-]     S-[     XX      XX      XX      XX      _
     _           _       _                        _                      _       _       _
 )

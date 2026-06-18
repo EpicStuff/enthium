@@ -1,42 +1,43 @@
 [enthium:layout]
 # numbers row
-- = <
-= = >
+- = noop
+= = noop
 
 # top row
 q = q
 w = y
 e = u
 r = o
-t = esc
+t = =
 y = x
 u = l
 i = d
 o = p
 p = z
-[ = =
-] = noop
+[ = (
+] = [
+\ = {
 
 # home row
 capslock = layer(enthium_shift)
 a = c
 s = i
-d = e
-f = a
-g = '
+d = a
+f = e
+g = -
 h = k
 j = h
 k = t
 l = n
 ; = s
-' = -
+' = w
 
 # bottom row
-leftshift = overload(qwerty_control, b)
-z = w
-x = ;
-c = ,
-v = .
+leftshift = overload(enthium_control, b)
+z = '
+x = ,
+c = .
+v = ;
 b = /
 n = j
 m = m
@@ -48,31 +49,56 @@ rightshift = layer(altgr)
 # space row
 leftcontrol = layer(meta)
 leftmeta = overload(qwerty, toggle(qwerty))
-leftalt = overload(qwerty_alt, backspace)
+leftalt = overload(alt, backspace)
 space = lettermod(symbols, space, 150, 200)
 rightalt = lettermod(enthium_shift, r, 10, 200)
 
 [enthium_shift:S]
-9 = ?
-- = ]
-= = }
-backspace = S-delete
-
-t = S-enter
-
-c = (
-v = [
-b = {
+9 = \
+0 = |
+- = noop
+= = noop
+backspace = delete
+[ = )
+] = ]
+\ = }
 
 
-leftalt = overload(qwerty_alt, delete)
+leftalt = overload(alt, delete)
+
+# shortcuts
+[enthium_control:C]
+# number row
+- = C--
+= = C-=
+
+# top row
+e = C-z
+r = C-h
+t = C-t
+y = C-'
+i = noop
+p = C-u
+
+# home row
+s = C-s
+f = C-f
+g = C-d
+j = C-o
+k = noop
+; = C-i
+' = C-;
+
+# bottom row
+z = C-v
+x = C-x
+v = C-w
+. = C-e
+/ = C-,
 
 
 ############# mirrored #############
 [mirrored]
-# mouse
-kp8 = enter
-
 # numbers row
 ` = backspace
 1 = >
@@ -106,7 +132,7 @@ p = q
 \ = tab
 
 # home row
-capslock = lettermod(enthium_shift, -, 50, 200)
+capslock = lettermod(enthium_shift, w, 50, 200)
 a = s
 s = n
 d = t
@@ -118,9 +144,10 @@ k = e
 l = i
 ; = c
 apostrophe = layer(enthium_shift)
+enter = layer(shift)
 
 # bottom row
-leftshift = lettermod(qwerty_control, v, 50, 200)
+leftshift = lettermod(enthium_control, v, 50, 200)
 z = f
 x = g
 c = m
@@ -131,11 +158,12 @@ m = ,
 , = ;
 . = b
 / = w
-rightshift = overload(qwerty_control, w)
+rightshift = overload(enthium_control, w)
 
 # space row
-leftmeta = rightcontrol
+leftcontrol = rightcontrol
 leftalt = lettermod(enthium_shift, r, 150, 200)
+rightalt = overload(alt, backspace)
 
 leftalt+capslock = capslock
 
